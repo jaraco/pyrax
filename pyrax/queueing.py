@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-# Copyright 2012 Rackspace
+# Copyright (c)2012 Rackspace US, Inc.
 
 # All Rights Reserved.
 #
@@ -22,7 +22,7 @@ import json
 import os
 import re
 
-import six
+from six.moves import urllib
 
 import pyrax
 from pyrax.client import BaseClient
