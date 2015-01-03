@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
 from __future__ import absolute_import
@@ -19,7 +18,7 @@ class KeystoneIdentity(BaseIdentity):
     _default_region = "RegionOne"
 
     def _get_auth_endpoint(self):
-        ep = pyrax.get_setting("auth_endpoint")
+        ep = self._auth_endpoint or pyrax.get_setting("auth_endpoint")
         if ep is None:
             raise exc.EndpointNotDefined("No auth endpoint has been specified.")
         return ep
